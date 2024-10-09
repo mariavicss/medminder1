@@ -24,9 +24,10 @@ public class Habitacion {
     
     public Habitacion(int numHab,ArrayList<Paciente> listaPacientes){
         this.numHab = numHab;
+        this.listaPacientes = new ArrayList<>();
         for(Paciente p : listaPacientes){
             this.listaPacientes.add(new Paciente(p));
-        }
+        } //COPIA PROFUNDA
     }
     
     public Habitacion(){

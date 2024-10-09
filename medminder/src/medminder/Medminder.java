@@ -17,17 +17,12 @@ public class Medminder {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
         String DNI, nombre, apellidos, genero;
         int edad, numHab;
         ArrayList<Paciente> p = new ArrayList<>();
-        
-        /*
-        Paciente t2 = new Paciente("376248","Pepito", "Serrano",78,"Hombre");
-        Paciente t3 = new Paciente (t2);
-        
-        System.out.println(t2);
-        System.out.println(t3);
-        */
+        double dosis;
         
         //Leer datos por pantalla
         Scanner sc = new Scanner(System.in);
@@ -61,6 +56,29 @@ public class Medminder {
         
         
         Habitacion test2 = new Habitacion(numHab, p);
+        
+        System.out.println(test2);
+        
+        System.out.println("Introduce nueva habitación:");
+        numHab = sc.nextInt();
+        
+        test2.setNumHab(numHab);
+        System.out.println(test2);
+        
+        
+        
+        System.out.println("Introduce el nombre del medicamento: ");
+        nombre = sc.next();
+        
+        System.out.println("Introduce la cantidad de dosis: ");
+        dosis = sc.nextDouble();
+        
+        
+        Medicamentos testt2 = new Medicamentos (nombre, dosis);
+        Medicamentos testt3 = new Medicamentos (testt2);
+        
+        System.out.println(testt2);
+        System.out.println(testt3);
         
         
         
