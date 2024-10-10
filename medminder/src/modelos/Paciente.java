@@ -18,7 +18,8 @@ public class Paciente {
     
     private String DNI;
     private String nombre;
-    private String apellidos;
+    private String apellido1;
+    private String apellido2;
     private int edad;
     private String genero;
     
@@ -26,10 +27,11 @@ public class Paciente {
     // CONSTRUCTORES
     //---------------
     
-    public Paciente(String DNI, String nombre, String apellidos, int edad, String genero){
+    public Paciente(String DNI, String nombre, String apellido1, String apellido2, int edad, String genero){
         this.DNI = DNI;
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
         this.edad = edad;
         this.genero = genero;
     }
@@ -37,13 +39,14 @@ public class Paciente {
     public Paciente(){
         this.DNI ="";
         this.nombre ="";
-        this.apellidos ="";
+        this.apellido1 ="";
+        this.apellido2 = "";
         this.edad =0;
         this.genero ="";
     }
     
     public Paciente(Paciente otro){
-        this(otro.DNI, otro.nombre, otro.apellidos, otro.edad, otro.genero);
+        this(otro.DNI, otro.nombre, otro.apellido1,otro.apellido2, otro.edad, otro.genero);
     }
     
     //------------------
@@ -66,12 +69,20 @@ public class Paciente {
         this.nombre = nombre;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getApellido1() {
+        return apellido1;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public String getApellido2() {
+        return apellido2;
+    }
+
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
     }
 
     public int getEdad() {
@@ -89,6 +100,8 @@ public class Paciente {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+   
     
     //-------------------
     // OVERRIDEN METHODS
@@ -100,13 +113,15 @@ public class Paciente {
         sb.append("Paciente{");
         sb.append("DNI=").append(DNI);
         sb.append(", nombre=").append(nombre);
-        sb.append(", apellidos=").append(apellidos);
+        sb.append(", apellido1=").append(apellido1);
+        sb.append(", apellido2=").append(apellido2);
         sb.append(", edad=").append(edad);
         sb.append(", genero=").append(genero);
         sb.append('}');
         return sb.toString();
     }
-    
+
+  
     
     
 }

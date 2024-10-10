@@ -19,7 +19,7 @@ public class Medminder {
         // TODO code application logic here
         
         
-        String DNI, nombre, apellidos, genero;
+        String DNI, nombre, apellido1, apellido2, genero;
         int edad, numHab;
         ArrayList<Paciente> p = new ArrayList<>();
         double dosis;
@@ -32,8 +32,11 @@ public class Medminder {
         System.out.println("Introduce el nombre del paciente: ");
         nombre = sc.next();
         
-        System.out.println("Introduce los apellidos del paciente: ");
-        apellidos = sc.next();
+        System.out.println("Introduce el primer apellido del paciente: ");
+        apellido1 = sc.next();
+        
+        System.out.println("Introduce el segundo apellido del paciente: ");
+        apellido2 = sc.next();
         
         System.out.println("Introduce la edad del paciente: ");
         edad = sc.nextInt();
@@ -41,7 +44,7 @@ public class Medminder {
         System.out.println("Introduce el género del paciente: ");
         genero = sc.next();
         
-        Paciente t2 = new Paciente(DNI, nombre, apellidos, edad, genero);
+        Paciente t2 = new Paciente(DNI, nombre, apellido1, apellido2, edad, genero);
         Paciente t3 = new Paciente (t2);
         
         System.out.println(t2);
