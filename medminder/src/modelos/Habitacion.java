@@ -31,8 +31,7 @@ public class Habitacion {
     }
     
     public Habitacion(){
-        this.numHab = 0;
-        this.listaPacientes = new ArrayList<>();
+        this(0, new ArrayList<>());
     }
     
     public Habitacion(Habitacion otro){

@@ -27,8 +27,7 @@ public class Medicamentos {
     }
     
     public Medicamentos(){
-        this.nombre ="";
-        this.dosis = 0;
+        this("",0);
     }
     
     public Medicamentos(Medicamentos otro){

@@ -1,5 +1,7 @@
 package modelos;
 
+import java.util.Objects;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -26,8 +28,8 @@ public class Paciente {
     //---------------
     // CONSTRUCTORES
     //---------------
-    
-    public Paciente(String DNI, String nombre, String apellido1, String apellido2, int edad, String genero){
+
+    public Paciente(String DNI, String nombre, String apellido1, String apellido2, int edad, String genero) {
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -37,12 +39,7 @@ public class Paciente {
     }
     
     public Paciente(){
-        this.DNI ="";
-        this.nombre ="";
-        this.apellido1 ="";
-        this.apellido2 = "";
-        this.edad =0;
-        this.genero ="";
+        this("", "", "", "", 0, "");
     }
     
     public Paciente(Paciente otro){
@@ -121,7 +118,4 @@ public class Paciente {
         return sb.toString();
     }
 
-  
-    
-    
 }
