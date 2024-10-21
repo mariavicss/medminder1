@@ -19,7 +19,9 @@ public class Medminder {
         // TODO code application logic here
         
         
-        String DNI, nombre, apellido1, apellido2, genero;
+        String DNI, nombre, apellido1, apellido2, aux_genero;
+        
+        Genero genero;
         int edad, numHab;
         ArrayList<Paciente> p = new ArrayList<>();
         double dosis;
@@ -42,7 +44,15 @@ public class Medminder {
         edad = sc.nextInt();
         
         System.out.println("Introduce el género del paciente: ");
-        genero = sc.next();
+        aux_genero = sc.next();
+        
+        genero = switch (aux_genero) {
+            case "MUJER" -> Genero.MUJER;
+            case "HOMBRE" -> Genero.HOMBRE;
+            default -> Genero.NODEFINIDO;
+        };
+        
+   
         
         Paciente t2 = new Paciente(DNI, nombre, apellido1, apellido2, edad, genero);
         Paciente t3 = new Paciente (t2);
@@ -55,6 +65,8 @@ public class Medminder {
         
         p.add(t2);
         p.add(t3);
+        
+        
         
         
         

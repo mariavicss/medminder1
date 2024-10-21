@@ -23,13 +23,13 @@ public class Paciente {
     private String apellido1;
     private String apellido2;
     private int edad;
-    private String genero;
+    private Genero genero;
     
     //---------------
     // CONSTRUCTORES
     //---------------
 
-    public Paciente(String DNI, String nombre, String apellido1, String apellido2, int edad, String genero) {
+    public Paciente(String DNI, String nombre, String apellido1, String apellido2, int edad, Genero genero) {
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -39,7 +39,7 @@ public class Paciente {
     }
     
     public Paciente(){
-        this("", "", "", "", 0, "");
+        this("", "", "", "", 0, Genero.NODEFINIDO);
     }
     
     public Paciente(Paciente otro){
@@ -90,11 +90,11 @@ public class Paciente {
         this.edad = edad;
     }
 
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 

@@ -26,7 +26,7 @@ public class Habitacion {
         this.numHab = numHab;
         this.listaPacientes = new ArrayList<>();
         for(Paciente p : listaPacientes){
-            this.listaPacientes.add(new Paciente(p));
+            this.listaPacientes.add(p);
         } //COPIA PROFUNDA
     }
     
